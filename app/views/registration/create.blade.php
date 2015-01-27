@@ -2,37 +2,47 @@
 
 @section('content')
 
-	<h1>Register</h1>
+<div class="row">
 
-	{{ Form::open(['route' => 'register_path']) }}
-		<div class="form-group">
-			{{ Form::label('username', 'Usersname: ') }}
-			{{ Form::text('username', null, ['class' => 'form-control']) }}
-			{{ $errors->first('username') }}
-		</div>
+	<div class="col-md-6">
 
-		<div class="form-group">
-			{{ Form::label('email', 'Email: ') }}
-			{{ Form::text('email', null, ['class' => 'form-control']) }}
-			{{ $errors->first('email') }}
-		</div>
+		<h1>Register</h1>
 
-		<div class="form-group">
-			{{ Form::label('password', 'Password: ') }}
-			{{ Form::password('password', ['class' => 'form-control']) }}
-			{{ $errors->first('password') }}
-		</div>
+		@include('layouts.partials.errors')
 
-		<div class="form-group">
-			{{ Form::label('password_confirmation', 'Password Confirmation: ') }}
-			{{ Form::password('password_confirmation', ['class' => 'form-control']) }}
-			{{ $errors->first('password_confirmation') }}
-		</div>
+		{{ Form::open(['route' => 'register_path']) }}
+			<div class="form-group">
+				{{ Form::label('username', 'Usersname: ') }}
+				{{ Form::text('username', null, ['class' => 'form-control']) }}
+				{{ $errors->first('username') }}
+			</div>
 
-		<div>
-			{{ Form::submit('Sign Up', ['class' => 'btn btn-primary']) }}
-		</div>
+			<div class="form-group">
+				{{ Form::label('email', 'Email: ') }}
+				{{ Form::text('email', null, ['class' => 'form-control']) }}
+				{{ $errors->first('email') }}
+			</div>
 
-	{{ Form::close() }}
+			<div class="form-group">
+				{{ Form::label('password', 'Password: ') }}
+				{{ Form::password('password', ['class' => 'form-control']) }}
+				{{ $errors->first('password') }}
+			</div>
+
+			<div class="form-group">
+				{{ Form::label('password_confirmation', 'Password Confirmation: ') }}
+				{{ Form::password('password_confirmation', ['class' => 'form-control']) }}
+				{{ $errors->first('password_confirmation') }}
+			</div>
+
+			<div>
+				{{ Form::submit('Sign Up', ['class' => 'btn btn-primary']) }}
+			</div>
+
+		{{ Form::close() }}
+
+	</div>
+
+</div>
 
 @stop
