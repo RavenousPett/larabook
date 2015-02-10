@@ -7,11 +7,11 @@
 |
 */
 
-Event::listen('Larbook.Registration.Events.UserRegistered', function($event){
+Event::listen('Larabook.Registration.Events.UserRegistered', function($event){
 
 	dd('Send a notification email');
 
-});
+});	
 
 /*
 |--------------------------------------------------------------------------
