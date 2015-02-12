@@ -9,7 +9,7 @@
 
 Event::listen('Larabook.Registration.Events.UserRegistered', function($event){
 
-	dd('Send a notification email');
+	// dd('Send a notification email');
 
 });	
 
