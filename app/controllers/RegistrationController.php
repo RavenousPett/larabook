@@ -14,6 +14,8 @@ class RegistrationController extends \BaseController {
 
 		$this->registrationForm = $registrationForm;
 
+		$this->beforeFilter('guest');
+
 	}
 
 	/**

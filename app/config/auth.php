@@ -28,7 +28,7 @@ return array(
 	|
 	*/
 
-	'model' => 'Larbook\Users\User',
+	'model' => 'Larabook\Users\User',
 
 	/*
 	|--------------------------------------------------------------------------

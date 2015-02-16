@@ -2,7 +2,7 @@
 
 use Illuminate\Routing\Controller;
 
-class PagesController extends Controller {
+class PagesController extends BaseController {
 
 	public function home(){
 
