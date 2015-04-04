@@ -1,6 +1,11 @@
 <?php
 
+use Larabook\Core\CommandBus;
+use Larabook\Statuses\PublishStatusCommand;
+
 class StatusController extends \BaseController {
+
+	use CommandBus;
 
 	/**
 	 * Display a listing of the resource.
@@ -24,14 +29,14 @@ class StatusController extends \BaseController {
 	}
 
 
-	/**
-	 * Store a newly created resource in storage.
-	 *
-	 * @return Response
-	 */
+	// Save a new status
 	public function store()
 	{
-		//
+	
+		$this->execute(
+			new PublishStatusCommand(Input::get('body'), Auth::user()->id) 
+		);
+
 	}
 
 
