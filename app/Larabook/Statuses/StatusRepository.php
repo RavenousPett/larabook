@@ -8,9 +8,8 @@ class StatusRepository{
 
 	public function getAllForUser(User $user){
 
-		// hasMany doesn't work :(
-		// return $user->statuses;
-		return Status::whereUserId($user->id)->get();
+		return $user->statuses()->get();
+		// return Status::whereUserId($user->id)->get();
 
 	}
 
