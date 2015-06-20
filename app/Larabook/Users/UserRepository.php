@@ -11,4 +11,11 @@ class UserRepository{
 
 	}
 
+	// Get a paginated list of all users
+	public function getPaginated($howMany = 25){
+
+		return User::simplePaginate($howMany);
+
+	}
+
 }
